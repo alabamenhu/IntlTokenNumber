@@ -1,0 +1,21 @@
+{
+  "name": "Intl::Token::Number",
+  "description": "A module for detecting numbers in localized format",
+  "version": "0.1",
+  "perl": "6.*",
+  "raku": "6.*",
+  "authors": [
+    "Matthew Stephen Stuckwisch"
+  ],
+  "auth": "github:alabamenhu",
+  "depends": ["Intl::UserLanguage", "Intl::CLDR:ver<0.5.0+>"],
+  "build-depends": [],
+  "test-depends": [],
+  "provides": {
+    "Intl::Token::Number": "lib/Intl/Token/Number.pm6",
+    "Intl::Token::Util::Digits": "lib/Intl/Token/Util/Digits.pm6"
+  },
+  "resources": [],
+  "license": "Artistic-2.0",
+  "source-url": "git://github.com/alabamenhu/IntlTokenNumber.git"
+}
