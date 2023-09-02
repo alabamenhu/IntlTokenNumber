@@ -15,7 +15,7 @@ is Grammar.parse("aaa1.000aaa",       :actions(Action), :args(("en",))).made, 1;
 is Grammar.parse("aaa1,000aaa",       :actions(Action), :args(("es",))).made, 1;
 is Grammar.parse("aaa1.000aaa",       :actions(Action), :args(("es",))).made, 1000;
 is Grammar.parse("aaa0,1234E5aaa",    :actions(Action), :args(("fr",))).made, 12340;
-is Grammar.parse("aaa0,1234 E 5aaa",  :actions(Action), :args(("fr",))).made, 12340;
+is Grammar.parse("aaa0,1234 E 4aaa",  :actions(Action), :args(("fr",))).made, 1234;
 is Grammar.parse("aaa0,1234 E +5aaa", :actions(Action), :args(("fr",))).made, 12340;
 is Grammar.parse("aaa0,1234 E -5aaa", :actions(Action), :args(("fr",))).made, 0.000001234;
 is Grammar.parse("aaa99%aaa",         :actions(Action), :args(("de",))).made, 0.99;
