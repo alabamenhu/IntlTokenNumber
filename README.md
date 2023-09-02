@@ -38,9 +38,10 @@ say +$<local-number>; # 0.9
 say +$<local-number>; # 123
 ```
 
-**Note:** Presently, the `<local-number>` match object has several submatches.
-These may be interesting, but should not be relied upon at the moment.
-At some point in the future, a proper (and stable) method for accessing metadata will be provided.
+For those interested in details about the match, the match object is introspectable:
+  * `base-number`: the number matched, ignoring percent/exponential modifiers
+  * `exponent`: the exponent used (defaults to 1 for non-exponential numbers)
+  * `number-type`: any of `standard`, `percent`, `permille`, `exponential`  
 
 ## To do
   * Add support for native/traditional/financial-style numbers
@@ -51,6 +52,11 @@ At some point in the future, a proper (and stable) method for accessing metadata
 
 ## Version history
 
+* **v0.6**
+  * Optimized grammar
+  * Now uses RakuAST for generation.
+  * Match role provides more introspection
+  * Now prefer `User::Language` to `Intl::UserLanguage`
 * **v.0.5.0**
   * First published version as an independent module
   * Adapted to work with newest version of `Intl::CLDR`
